@@ -1,0 +1,810 @@
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #fff;
+  --default-color: #4e4e4e;
+  --heading-color: #0a090f;
+  --accent-color: #0078ff;
+}
+html {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--default-color);
+}
+.bg-color-white {
+  background-color: var(--background-color);
+}
+.default-gray-font {
+  color: var(--default-color);
+}
+.heading-font-color {
+  color: var(--heading-color);
+}
+.main-font-color {
+  color: var(--accent-color);
+}
+.main-bg-color {
+  background-color: var(--accent-color);
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+}
+h2::after {
+  content: " ";
+  width: 40%;
+  height: 3.5px;
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 100%;
+  left: 30%;
+}
+.go-up {
+  background-color: var(--accent-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.go-up a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+/* ------------------------------------------------------------------- */
+/* navbar */
+nav .navbar-brand {
+  font-size: 30px;
+  font-weight: 700;
+}
+nav .nav-item {
+  /* overflow: hidden; */
+  position: relative;
+}
+nav .nav-item::after {
+  content: "";
+  height: 1px;
+  width: 70%;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: -90%;
+  opacity: 0;
+  transition:
+    left 0.3s,
+    opacity 0.3s;
+}
+nav .nav-link {
+  color: white;
+}
+/* </navbar> */
+/* ------------------------------------------------------------------- */
+/* header */
+header {
+  background-image: url(../images/intro-bg.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+}
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+.header-layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+header p {
+  letter-spacing: 1px;
+  font-size: 36px;
+  font-weight: 700;
+}
+header p::after {
+  content: "|";
+  letter-spacing: 1px;
+  font-size: 36px;
+  font-weight: 700;
+  animation-name: typing;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+@keyframes typing {
+  /* Designer */
+  0% {
+    content: " D|";
+  }
+  1% {
+    content: " De|";
+  }
+  2% {
+    content: " Des|";
+  }
+  3% {
+    content: " Desi|";
+  }
+  4% {
+    content: " Desig|";
+  }
+  5% {
+    content: " Design|";
+  }
+  6% {
+    content: " Designe|";
+  }
+  7%,
+  8%,
+  9%,
+  10%,
+  11%,
+  12% {
+    content: " Designer|";
+  }
+  13% {
+    content: " Designe|";
+  }
+  14% {
+    content: " Design|";
+  }
+  15% {
+    content: " Desig|";
+  }
+  16% {
+    content: " Desi|";
+  }
+  17% {
+    content: " Des|";
+  }
+  18% {
+    content: " De|";
+  }
+  19% {
+    content: " D|";
+  }
+  20% {
+    content: " |";
+  }
+
+  /* Developer */
+  21% {
+    content: " D|";
+  }
+  22% {
+    content: " De|";
+  }
+  23% {
+    content: " Dev|";
+  }
+  24% {
+    content: " Deve|";
+  }
+  25% {
+    content: " Devel|";
+  }
+  26% {
+    content: " Develo|";
+  }
+  27% {
+    content: " Develop|";
+  }
+  28% {
+    content: " Develope|";
+  }
+  29%,
+  30%,
+  31%,
+  32%,
+  33%,
+  34% {
+    content: " Developer|";
+  }
+  35% {
+    content: " Develope|";
+  }
+  36% {
+    content: " Develop|";
+  }
+  37% {
+    content: " Develo|";
+  }
+  38% {
+    content: " Devel|";
+  }
+  39% {
+    content: " Deve|";
+  }
+  40% {
+    content: " Dev|";
+  }
+  41% {
+    content: " De|";
+  }
+  42% {
+    content: " D|";
+  }
+  43% {
+    content: " |";
+  }
+
+  /* Freelancer */
+  44% {
+    content: " F|";
+  }
+  45% {
+    content: " Fr|";
+  }
+  46% {
+    content: " Fre|";
+  }
+  47% {
+    content: " Free|";
+  }
+  48% {
+    content: " Freel|";
+  }
+  49% {
+    content: " Freela|";
+  }
+  50% {
+    content: " Freelan|";
+  }
+  51% {
+    content: " Freelanc|";
+  }
+  52% {
+    content: " Freelance|";
+  }
+  53%,
+  54%,
+  55%,
+  56%,
+  57%,
+  58%,
+  59% {
+    content: " Freelancer|";
+  }
+  60% {
+    content: " Freelance|";
+  }
+  61% {
+    content: " Freelanc|";
+  }
+  62% {
+    content: " Freelan|";
+  }
+  63% {
+    content: " Freela|";
+  }
+  64% {
+    content: " Freel|";
+  }
+  65% {
+    content: " Free|";
+  }
+  66% {
+    content: " Fre|";
+  }
+  67% {
+    content: " Fr|";
+  }
+  68% {
+    content: " F|";
+  }
+  69% {
+    content: " |";
+  }
+
+  /* Photographer */
+  70% {
+    content: " P|";
+  }
+  71% {
+    content: " Ph|";
+  }
+  72% {
+    content: " Pho|";
+  }
+  73% {
+    content: " Phot|";
+  }
+  74% {
+    content: " Photo|";
+  }
+  75% {
+    content: " Photog|";
+  }
+  76% {
+    content: " Photogr|";
+  }
+  77% {
+    content: " Photogra|";
+  }
+  78% {
+    content: " Photograp|";
+  }
+  79% {
+    content: " Photograph|";
+  }
+  80% {
+    content: " Photographe|";
+  }
+  81%,
+  82%,
+  83%,
+  84%,
+  85%,
+  86%,
+  87% {
+    content: " Photographer|";
+  }
+  88% {
+    content: " Photographe|";
+  }
+  89% {
+    content: " Photograph|";
+  }
+  90% {
+    content: " Photograp|";
+  }
+  91% {
+    content: " Photogra|";
+  }
+  92% {
+    content: " Photogr|";
+  }
+  93% {
+    content: " Photog|";
+  }
+  94% {
+    content: " Photo|";
+  }
+  95% {
+    content: " Phot|";
+  }
+  96% {
+    content: " Pho|";
+  }
+  97% {
+    content: " Ph|";
+  }
+  98% {
+    content: " P|";
+  }
+  99% {
+    content: " |";
+  }
+  100% {
+    content: " |";
+  }
+}
+
+/* </header> */
+/* ------------------------------------------------------------------- */
+/* about */
+
+#about {
+  background-color: var(--background-color);
+}
+#about h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+#about h5 {
+  font-size: 13px;
+  font-weight: 600;
+}
+.w-90 {
+  width: 90%;
+}
+.w-55 {
+  width: 55%;
+}
+#about h2 {
+  position: relative;
+}
+#about h2::after {
+  content: "";
+  height: 3px;
+  width: 10%;
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+#about p {
+  font-size: 18px;
+}
+#about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* </about> */
+/* ------------------------------------------------------------------- */
+/* resume */
+#resume .progress {
+  width: 2px;
+  height: 100%;
+  background-color: var(--accent-color);
+}
+#resume .progress-first .progress {
+  height: 90%;
+}
+#resume .progress-circle {
+  margin-top: 3px;
+  width: 20px;
+  border: solid 2px var(--accent-color);
+  height: 20px;
+  background-color: white;
+}
+#resume h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+#resume h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--default-color);
+  opacity: 80%;
+}
+#resume ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+}
+.resume-date {
+  font-size: 16px;
+  font-weight: 600;
+}
+/* </resume> */
+/* ------------------------------------------------------------------- */
+/* services */
+#services .icon {
+  width: 65px;
+  height: 65px;
+  background-color: var(--accent-color);
+}
+#services h3 {
+  font-weight: 700;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+#services p {
+  line-height: 24px;
+  font-size: 14px;
+}
+.service-card {
+  box-sizing: border-box;
+  border-bottom: 5px solid transparent;
+  transition:
+    border-bottom 0.3s ease,
+    transform 0.3s ease;
+}
+/* </services> */
+/* ------------------------------------------------------------------- */
+/* achivments */
+#achivments {
+  background-image: url(../images/counters-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.section-achi-layer {
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in srgb, #0078ff 60%, transparent);
+}
+#achivments p {
+  font-size: 16px;
+  font-weight: 700;
+  color: color-mix(in srgb, white, transparent 40%);
+}
+#achivments span {
+  font-size: 48px;
+  font-weight: 700;
+}
+/* <achivments> */
+/* ------------------------------------------------------------------- */
+/* Portfolio */
+#Portfolio .nav-link {
+  font-size: 16px;
+  font-weight: 600;
+}
+.portfolio-item-disc {
+  width: 90%;
+  position: absolute;
+  bottom: -30%;
+  left: 5%;
+  opacity: 0;
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 10%
+  );
+  transition:
+    bottom 0.5s,
+    opacity 1s;
+}
+.portfolio-item-disc h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.portfolio-item-disc p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 14px;
+}
+.portfolio-item-disc a {
+  font-size: 24px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+.portfolio-item {
+  overflow: hidden;
+}
+.portfolio-item i {
+  transition: color 0.3s;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border: 0;
+  color: var(--accent-color);
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+  color: var(--default-color);
+  transition: color 0.3s;
+}
+/* </Portfolio> */
+/* ------------------------------------------------------------------- */
+/* pricing */
+.price-item {
+  border-bottom: 1px dotted var(--default-color);
+  width: 100%;
+}
+#pricing h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+#pricing span {
+  font-size: 18px;
+}
+/* </pricing> */
+/* ------------------------------------------------------------------- */
+/* Q&A */
+#qAndA h3 {
+  font-weight: 400;
+  font-size: 34px;
+}
+#qAndA .title-disc p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+#qAndA h2::after {
+  content: " ";
+  width: 0%;
+  height: 0px;
+  position: static;
+}
+#qAndA .accordion-item h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--accent-color);
+}
+.accordion-button {
+  transition: color 0.3s;
+}
+/* ------------------------------------------------------------------- */
+/* testimonial */
+#testimonial {
+  background-image: url(../images/testimonials-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.testimonial-layer {
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in srgb, #0078ff 60%, transparent);
+}
+#testimonial img {
+  width: 100px;
+  border: 6px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+.stars-icons i {
+  color: #ffc107;
+}
+#testimonial h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+#testimonial h4 {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--background-color), transparent 40%);
+}
+.fa-quote-right,
+.fa-quote-left {
+  color: color-mix(in srgb, var(--background-color), transparent 40%);
+  font-size: 26px;
+}
+#testimonial .carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+/* </testimonial> */
+/* ------------------------------------------------------------------- */
+/* contact */
+#contact {
+  background-color: #ffffff;
+}
+#contact .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: #0078ff 1px solid;
+  transition:
+    background-color 0.3s,
+    border 0.3s;
+}
+#contact .icon i {
+  color: var(--accent-color);
+  font-size: 18px;
+  transition: color 0.3s;
+}
+#contact h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+#contact p {
+  font-size: 14px;
+  color: var(--default-color);
+}
+.contact-shadow {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+#contact button {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+/* </contact> */
+/* ------------------------------------------------------------------- */
+/* footer */
+footer {
+  background-color: var(--accent-color);
+  color: white;
+}
+footer .icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid color-mix(in srgb, white, transparent 40%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s;
+}
+footer .icon a {
+  color: color-mix(in srgb, white, transparent 40%);
+  transition: color 0.3s;
+}
+.copyrights {
+  color: color-mix(in srgb, white, transparent 40%);
+}
+.copyrights-line {
+  font-size: 13px;
+}
+/* </footer> */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* hover */
+
+.go-up:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+/* navbar */
+nav .nav-item:hover::after {
+  left: 15%;
+  opacity: 1;
+}
+nav .nav-link:hover {
+  color: white;
+}
+/* services */
+.service-card:hover {
+  border-bottom: 5px solid var(--accent-color);
+  transform: translateY(-10px);
+}
+.service-card:hover h3 {
+  color: var(--accent-color);
+}
+/* Portfolio */
+.portfolio-item:hover .portfolio-item-disc {
+  bottom: 10px;
+  opacity: 1;
+}
+.portfolio-item i:hover {
+  color: var(--accent-color);
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border: 0;
+  color: var(--default-color);
+}
+/* Q&A */
+.accordion-button:hover {
+  color: var(--accent-color);
+}
+/* contact */
+#contact .contact-item:hover i {
+  color: white;
+}
+#contact .contact-item:hover .icon {
+  background-color: var(--accent-color);
+  border: 1px white solid;
+}
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #caced2;
+}
+#contact button:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+/* footer */
+footer .icon:hover {
+  border: 1px solid white;
+}
+footer .icon:hover a {
+  color: white;
+}
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* Responsive */
+@media screen and (max-width: 1200px) {
+  /* navbar */
+  nav .nav-item:hover::after {
+    opacity: 0;
+  }
+  nav .navbar-collapse {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  nav li a {
+    color: black !important;
+    font-weight: 600 !important;
+  }
+  nav li a:hover {
+    color: var(--accent-color) !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* resume */
+  #resume .progress-responsive .progress {
+    height: 90%;
+  }
+}
+@media screen and (max-width: 576px) {
+  /* Portfolio */
+  #Portfolio .nav-link {
+    font-size: 13px;
+  }
+}
