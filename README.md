@@ -52,7 +52,7 @@ Make sure to keep the `css`, `images`, and other required project assets in thei
 
 ## Live Demo
 
-[View Live Demo]([YOUR_GITHUB_PAGES_URL](https://mennat-alah.github.io/DevFolio-website/))
+https://mennat-alah.github.io/DevFolio-website/
 
 ## Acknowledgment
 
